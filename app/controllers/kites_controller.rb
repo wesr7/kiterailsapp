@@ -1,7 +1,7 @@
 class KitesController < ApplicationController
 
     def index
-        @kites = Kites.all
+        @kites = Kite.all
     end
 
     def show

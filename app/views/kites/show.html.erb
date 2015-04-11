@@ -30,3 +30,8 @@
     <strong>Additional Information:</strong>
     <%= @kite.additional_information %>
 </p>
+
+<p>
+    <%= link_to 'Edit Info', edit_kite_path(@kite) %>
+    <%= link_to 'Back to Kites List', kites_path %>
+</p>

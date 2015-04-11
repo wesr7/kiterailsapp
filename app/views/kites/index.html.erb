@@ -1,10 +1,24 @@
 <h1>Kites List</h1>
-
+<h2><%= link_to 'Add Kite', new_kite_path %></h2>
 <table>
     <tr>
         <th>Name</th>
         <th>Origin</th>
         <th>Color</th>
-        <th>Weight</th>
+        <th>Style</th>
+        <th>Quantity</th>
+        <th colspan="2"></th>
     </tr>
+
+    <% @kites.each do |kite| %>
+    <tr>
+        <td><%= kite.name %></td>
+        <td><%= kite.origin %></td>
+        <td><%= kite.color %></td>
+        <td><%= kite.style %></td>
+        <td><%= kite.quantity %></td>
+        <td><%= link_to 'More info', kite_path(kite) %></td>
+        <td><%= link_to 'Edit info', edit_kite_path(kite) %></td>
+    </tr>
+    <% end %>
 </table>
